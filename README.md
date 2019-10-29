@@ -13,14 +13,15 @@ npm install --save @sophek/use-my-quote
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import { useMyQuote } from '@sophek/use-my-quote'
 
-import { useMyHook } from '@sophek/use-my-quote'
-
-const Example = () => {
-  const example = useMyHook()
+const App = () => {
+  const { say } = useMyQuote()
   return (
-    <div>{example}</div>
+    <div>
+      {say}
+    </div>
   )
 }
 ```
