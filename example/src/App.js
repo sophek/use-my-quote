@@ -1,11 +1,11 @@
 import React from 'react'
-import { useMyHook } from '@sophek/use-my-quote'
+import { useMyQuote } from '@sophek/use-my-quote'
 
 const App = () => {
-  const example = useMyHook()
+  const { say } = useMyQuote()
   return (
     <div>
-      {example}
+      {say}
     </div>
   )
 }

@@ -1,21 +1,9 @@
-import * as React from 'react'
+import { useState, useEffect } from 'react'
 
-export const useMyHook = () => {
-  let [{
-    counter
-  }, setState] = React.useState({
-    counter: 0
-  })
-
-  React.useEffect(() => {
-    let interval = window.setInterval(() => {
-      counter++
-      setState({counter})
-    }, 1000)
-    return () => {
-      window.clearInterval(interval)
-    }
+export const useMyQuote = () => {
+  const [say, setSay] = useState('Sophek is cool')
+  useEffect(() => {
+    setSay('Sophek is very cool')
   }, [])
-
-  return counter
+  return { say }
 }
